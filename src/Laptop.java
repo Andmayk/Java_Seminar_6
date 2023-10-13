@@ -1,16 +1,16 @@
-public class laptop {
-    private String manufacturer;
+public class Laptop {
+    private String firm;
     private int ram;
     private int hdd;
     private String os;
     private String color;
 
-    public String getManufacturer() {
-        return manufacturer;
+    public String getFirm() {
+        return firm;
     }
 
-    public void setManufacturer(String manufacturer) {
-        this.manufacturer = manufacturer;
+    public void setFirm(String firm) {
+        this.firm = firm;
     }
 
     public int getRam() {
@@ -43,6 +43,10 @@ public class laptop {
 
     public void setColor(String color) {
         this.color = color;
+    }
+
+    public String toString(){
+        return "firma: " + firm + ", RAM: " + ram + ", HDD: " + hdd + ", OS: " + os+ ", color: " + color;
     }
 
 }

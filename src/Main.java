@@ -19,8 +19,6 @@ public class Main {
         int countLaptops = 10;
         supplyOfLaptops(laptops, countLaptops, ramArray, hddArray, firmArray, osArray, colorArray);
 
-        //printSet(laptops);
-
         try (Scanner scanner = new Scanner(System.in)) {
             int userAnsver;
             do {

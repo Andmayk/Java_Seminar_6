@@ -45,8 +45,32 @@ public class Laptop {
         this.color = color;
     }
 
-    public String toString(){
-        return "firma: " + firm + ", RAM: " + ram + ", HDD: " + hdd + ", OS: " + os+ ", color: " + color;
+    public void clear() {
+        this.ram = 0;
+        this.hdd = 0;
+        this.firm ="";
+        this.os = "";
+        this.color = "";
     }
 
+    public String toString(){
+        return "Фирма: " + firm + ", RAM: " + ram + ", HDD: " + hdd + ", OС: " + os+ ", цвет: " + color;
+    }
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj){
+            return true;
+        }
+        if (!(obj instanceof Laptop)){
+            return false;
+        }
+        Laptop laptop = (Laptop) obj;
+        return firm.equals(laptop.firm) && ram == laptop.ram && hdd == laptop.hdd
+                && os.equals(laptop.os) && color.equals(laptop.color);
+    }
+
+    @Override
+    public int hashCode() {
+        return firm.hashCode() + 7*ram + 13*hdd + 17*os.hashCode() + 19*color.hashCode();
+    }
 }

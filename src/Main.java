@@ -115,7 +115,7 @@ public class Main {
     static void supplyOfLaptops(Set<Laptop> set, int count, Integer[] ramArray, Integer[] hddArray, String[] firmArray ,String[] osArray , String[] colorArray) {
         Random random = new Random();
 
-        for (int i = 0; i < count; i++ ) {
+        while (set.size()<count) {
             Laptop nout = new Laptop();
             nout.setFirm(firmArray[random.nextInt(0, firmArray.length)]);
             nout.setRam(ramArray[random.nextInt(0, ramArray.length)]);
